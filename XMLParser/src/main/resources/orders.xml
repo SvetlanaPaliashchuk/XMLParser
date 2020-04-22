@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<orders xmlns="http://www.training.jwd.com/orders"
+			xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+			xsi:schemaLocation="http://www.training.jwd.com/orders orders.xsd">
+			
+	<order tourType="excursion" country="Lithuania" id="tv1">
+		<city>Vilnius</city>
+		<startDate>15.06.2020</startDate>
+		<duration>2</duration>
+		<numberOfTourists>1</numberOfTourists>
+		<tourists>
+			<tourist>
+				<surname>Petrov</surname>
+				<name>Aleksandr</name>
+				<passport>DFO12345</passport>
+			</tourist>
+		</tourists>
+		<transport>bus</transport>
+		<meal>BB</meal>
+		<price>90</price>
+	</order>
+	
+    <order tourType="vacation" country="Spain" id="tv2">
+        <city>Barcelona</city>
+		<startDate>28/07/2020</startDate>
+        <duration>7</duration>
+        <numberOfTourists>2</numberOfTourists>
+		<tourists>
+			<tourist>
+				<surname>Ivanov</surname>
+				<name>Ivan</name>
+				<passport>KSD12345</passport>
+			</tourist>
+			<tourist>
+				<surname>Ivanova</surname>
+				<name>Oksana</name>
+				<passport>KSD12346</passport>
+			</tourist>
+		</tourists>
+		<transport>airplane</transport>
+		<meal>HB</meal>
+        <price>1250</price>
+    </order>
+	
+	<order tourType="weekend" country="Ukraine" id="tv3">
+        <city>Kiev</city>
+		<startDate>21/08/2020</startDate>
+        <duration>3</duration>
+        <numberOfTourists>2</numberOfTourists>
+		<tourists>
+			<tourist>
+				<surname>Sidorova</surname>
+				<name>Maria</name>
+				<passport>GRE12345</passport>
+			</tourist>
+			<tourist>
+				<surname>Timofeeva</surname>
+				<name>Ekaterina</name>
+				<passport>PGL12346</passport>
+			</tourist>
+		</tourists>
+		<transport>train</transport>
+		<meal>RO</meal>
+        <price>500</price>
+    </order>
+	
+	<order tourType="vacation" country="Egypt" id="tv4">
+        <city>Sharm El Sheikh</city>
+		<startDate>15/10/2020</startDate>
+        <duration>12</duration>
+        <numberOfTourists>3</numberOfTourists>
+		<tourists>
+			<tourist>
+				<surname>Levkova</surname>
+				<name>Anna</name>
+				<passport>LED12345</passport>
+			</tourist>
+			<tourist>
+				<surname>Levkov</surname>
+				<name>Anton</name>
+				<passport>LED12355</passport>
+			</tourist>
+			<tourist>
+				<surname>Levkov</surname>
+				<name>Egor</name>
+				<passport>LED12255</passport>
+			</tourist>
+		</tourists>
+		<transport>airplane</transport>
+		<meal>AI</meal>
+        <price>500</price>
+    </order>
+</orders>

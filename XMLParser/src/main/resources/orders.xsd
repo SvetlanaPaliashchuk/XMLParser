@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema"
+        targetNamespace="http://www.training.jwd.com/orders"
+        xmlns:tns="http://www.training.jwd.com/orders"
+        elementFormDefault="qualified">
+		
+	<element name="orders">
+        <complexType>
+            <sequence>
+                <element name="order" type="tns:order" minOccurs="1" maxOccurs="unbounded"/>
+            </sequence>
+        </complexType>
+    </element>
+
+	<complexType name="order">
+        <sequence>
+            <element name="city" type="string" minOccurs="1" maxOccurs="unbounded"/>
+			<element name="startDate" type="tns:startDate" minOccurs="1" maxOccurs="1"/>
+            <element name="duration" type="int" minOccurs="1" maxOccurs="1"/>
+			<element name="numberOfTourists" type="int" minOccurs="1"/>
+			<element name="tourists" type="tns:tourists" minOccurs="1"/>
+            <element name="transport" type="tns:transport" minOccurs="1" />
+            <element name="meal" type="tns:meal" minOccurs="0"/>
+            <element name="price" type="double" minOccurs="1"/>
+        </sequence>
+            <attribute name="country" type="tns:country" use="required"/>
+            <attribute name="tourType" type="tns:tourType" use="required"/>
+            <attribute name="id" type="tns:id" use="required" />
+    </complexType>
+	
+	
+	<complexType name="tourists">
+        <sequence>
+			<element name="tourist" type="tns:tourist" minOccurs="1" maxOccurs="unbounded"/>
+		</sequence>
+	</complexType>
+	
+	<complexType name="tourist">
+		<sequence>
+            <element name="surname" type="string" maxOccurs="1"/>
+			<element name="name" type="string" maxOccurs="1"/>
+			<element name="passport" type="string" maxOccurs="1"/>
+		</sequence>
+	</complexType>
+		
+	<simpleType name="tourType">
+        <restriction base="string">
+            <enumeration value="vacation"/>
+            <enumeration value="excursion"/>
+            <enumeration value="weekend"/>
+			<enumeration value="adventure"/>
+			<enumeration value="shoping"/>
+			<enumeration value="medical"/>
+        </restriction>
+    </simpleType>
+    
+    <simpleType name="country">
+        <restriction base="string">
+            <enumeration value="Bulgaria"/>
+            <enumeration value="Turkey"/>
+            <enumeration value="Thailand"/>
+            <enumeration value="Egypt"/>
+            <enumeration value="Spain"/>
+            <enumeration value="Greece"/>
+            <enumeration value="Ukraine"/>
+            <enumeration value="China"/>
+            <enumeration value="India"/>
+            <enumeration value="Italy"/>
+			<enumeration value="Lithuania"/>
+        </restriction>
+    </simpleType>
+	
+	 <simpleType name="id">
+        <restriction base="ID">
+            <pattern value="tv\d{1,7}"/>
+        </restriction>
+     </simpleType>
+	
+	<simpleType name="startDate">
+        <restriction base="string">
+            <pattern value="(0[1-9]|[12][0-9]|3[01])[- /.](0[1-9]|1[012])[- /.](19|20)\d\d"/>
+        </restriction>
+    </simpleType>
+	
+	 <simpleType name="transport">
+        <restriction base="string">
+            <enumeration value="car"/>
+            <enumeration value="bus"/>
+            <enumeration value="train"/>
+            <enumeration value="airplane"/>
+        </restriction>
+    </simpleType>
+	
+	<simpleType name="meal">
+        <restriction base="string">
+            <enumeration value="AI"/>
+            <enumeration value="BB"/>
+            <enumeration value="HB"/>
+            <enumeration value="FB"/>
+			<enumeration value="RO"/>
+			<enumeration value="UAI"/>
+        </restriction>
+    </simpleType>
+	
+</schema>
